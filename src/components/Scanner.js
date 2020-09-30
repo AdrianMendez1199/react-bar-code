@@ -27,7 +27,7 @@ const defaultLocatorSettings = {
     halfSample: true,
 };
 
-const defaultDecoders = ['ean_reader'];
+const defaultDecoders = ['ean_reader', 'code_128_reader'];
 
 const Scanner = ({
     onDetected,
@@ -85,6 +85,7 @@ const Scanner = ({
     };
 
     useLayoutEffect(() => {
+        console.log('aaq')
         Quagga.init({
             inputStream: {
                 type: 'LiveStream',
